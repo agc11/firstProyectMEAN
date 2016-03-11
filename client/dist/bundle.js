@@ -8,9 +8,10 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _angular2.default.module('olympics', []).controller('sportsController', function ($http) {
-  var that = this;
+  var _this = this;
+
   $http.get('/sports').then(function (response) {
-    that.sports = response.data;
+    _this.sports = response.data;
   });
 });
 
